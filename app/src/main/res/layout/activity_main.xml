@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="conversionResult"
+            type="com.tszpinda.cc.Conversion"/>
+    </data>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:weightSum="3"
+        android:paddingTop="60dp">
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/round_button"
+            android:text="@{conversionResult.from.symbol}"
+            android:textAlignment="center"
+            tools:text="PLN" />
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="@{Float.toString(conversionResult.rate)}"
+            tools:text="5.12"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/round_button"
+            android:text="@{conversionResult.to.symbol}"
+            android:textAlignment="center"
+            tools:text="GBP" />
+
+    </LinearLayout>
+
+</layout>
